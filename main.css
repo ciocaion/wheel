@@ -1,0 +1,1186 @@
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --first: white;
+    --second: #332ee0;
+    --third: #D6ced8;
+    --forth: #ff0808;
+    --fifth: #d77e80;
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+
+.about-body {
+    background-image: url(images/11.jpg);
+    background-repeat: no-repeat;
+    background-size: 1539px 1000px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.basket-body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("images/car3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sign-body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("images/1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.find-body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Header*/
+
+header{
+    background: rgb(73,73,73);
+    background: linear-gradient(90deg, rgba(73,73,73,0.8242647400757178) 25%, rgba(112,112,112,0.9082983535210959) 45%, rgba(219,219,219,0.4713235636051295) 75%);
+    width: 100%;
+    position: fixed;
+    overflow: hidden; 
+    top: 0;
+    z-index: 1;
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header ul a{
+    display: block;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+}
+
+header li a:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
+}
+
+header .logo{
+    float: left;
+    display: block;
+    font-size: 2em;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-top: 5px;
+    color: white;
+}
+
+header .logo:hover{
+    color: rgb(255, 0, 0);
+    transition: ease-out 0.8s;
+}
+
+header .navigation {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+header .menu-icon{
+    padding: 28px 20px;
+    position: relative;
+    float: right ;
+    cursor: pointer;
+}
+
+header .menu-icon .nav-icon{
+    background:#000000;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+header .menu-icon .nav-icon:before{
+    background: #000000;
+    content:"" ;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+
+header .menu-icon .nav-icon::after{
+    background: #000000;
+    content:"" ;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+
+header .menu-btn{
+    display: none;
+}
+
+header .menu-btn:checked ~ .navigation {
+    max-height: 280px;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg); 
+    top: 0;
+}
+
+header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/*Home Page*/
+
+#section-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+}
+
+.first{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+h1{
+    padding-top: 100px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.first .first-img{
+    background-image: url("images/111.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.first .first-img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .3;
+}
+
+.specs-area{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.49933476808692223) 25%, rgba(204,204,204,0.9082983535210959) 45%, rgba(148,146,146,0.8158613787311799) 75%);
+}
+
+.specs-title{
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    padding-bottom: 50px;
+}
+
+.specs-title:hover{
+    color: red;
+    transition: ease-in .3s;
+    cursor: pointer;
+}
+
+ul.know-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.know-content li{
+    padding: 0 30px;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.know-content li i{
+    font-size: 50px;
+    color: rgb(44, 4, 4);
+    margin-bottom: 25px;
+}
+
+.know-content li h4{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.third{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.third .third-img{
+    background-image: url("images/222.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-btn{
+    display: inline-block;
+    margin-top: 500px;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.about-btn:hover{
+    background-color: rgb(63, 63, 63);
+    color: red;
+    transition: ease-in .3s;
+}
+
+/*About Page*/
+
+.about {
+    background-color: white;
+    margin-top: 200px;
+}
+
+h3 {
+
+    color: #ff0808;
+    size: 70px;
+    text-align: center;
+}
+
+h4 {
+    color: black;
+    size:22;
+    text-align: center;
+}
+
+.pic {
+  background-color: white;
+}
+
+.pic > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+
+/*Basket Page*/
+
+.data-basket{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.content-1{
+    padding-top: 200px;
+    color: white;
+    text-align: center;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list li{
+    margin-top: 0px;
+    padding: 15px;
+    list-style: none;
+}
+
+.content-2{
+    text-align: center;
+    color: red;
+    padding-top: 0px;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list-2{
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: 10px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list-2 li{
+    margin-top: 0px;
+    padding: 10px;
+    list-style: none;
+}
+
+.btn-pay{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-pay:hover{
+    background-color: rgb(63, 63, 63);
+    color: white;
+    transition: ease-in .3s;
+}
+
+/*Sign Up Page*/
+
+.css-input {
+    padding: 2px;
+    font-size: 19px;
+    border-width: 4px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 17px;
+    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    margin-top: 15px;
+}
+
+.css-input:focus {
+    outline:none;
+}
+
+.myButton {
+	box-shadow: 3px 4px 0px 0px #7d7d7d;
+	background:linear-gradient(to bottom, #ededed 5%, #878787 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #8a8a8a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-family: 'Orbitron', sans-serif;
+	font-size:17px;
+	padding:7px 32px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+    margin-top: 15px;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #878787 5%, #ededed 100%);
+	background-color:#878787;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.data-sign{
+    text-align: center;
+    margin-top: 150px;
+}
+
+/*Find Us Page*/
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 50px;  
+}
+
+.find-us{
+    width: 100%;
+    height: 300px;
+}
+
+.form{
+    margin-top: 350px;
+    position: right;
+}
+
+.btn-find{
+    border: 2px solid #332ee0;
+    border-radius: 24px;
+    transition: .3s;
+    background: none;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;  
+}
+
+.btn-find:hover{
+    background: #332ee0;    
+}
+
+.info{
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.map{
+    margin-left: 0px;
+}
+
+.map iframe {
+    width: 100%;
+    margin-top: 20px;
+    height: 300px;
+}
+
+section {
+    position: absolute;
+}
+
+/*Footer*/
+
+#footer{
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 150px;  
+    background: rgb(73,73,73);
+    background: linear-gradient(90deg, rgba(73,73,73,0.8242647400757178) 25%, rgba(112,112,112,0.9082983535210959) 45%, rgba(219,219,219,0.4713235636051295) 75%);
+    opacity: 0.8;
+}
+
+a,h2,p{
+    color: black;
+}
+
+.text{
+    color: black;
+}
+
+.email{
+    color: white;
+}
+
+.place{
+    color: white;
+}
+
+.phone{
+    color: white;
+}
+
+h2{
+    text-align: center;
+}
+
+.social{
+    text-align: center;
+}
+
+.content{
+    text-align: center;
+}
+
+.copyright{
+text-align: center;
+}
+
+/*small tablet*/
+
+@media (min-width:46.3em) {
+
+/*Header*/
+
+header{
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    z-index: 1;
+}
+
+header .logo{
+    font-size: 1.9em;
+}
+
+header ul a{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-top: 5px;
+}
+
+header li{
+    float: left;
+}
+
+header li a{
+    color: black;
+    padding:10px 24px;
+    padding-top: 15px;
+        
+}
+
+header li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+header ul a:hover{
+    margin-right: 10px;
+}
+
+header .navigation{
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+header .menu-icon{
+    display: none;
+}
+
+/*Basket Page*/
+
+.basket-body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("images/car5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content-1{
+    padding: 0;
+    color: white;
+    text-align: center;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list li{
+    margin-top: 0px;
+    padding: 15px;
+    list-style: none;
+}
+
+.content-2{
+    color: white;
+    padding-top: 100px;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list-2{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-top: 20px;
+    margin-left: 200px;
+    font-size: 10px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list-2 li{
+    margin-top: 30px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 10px;
+    list-style: none;
+}
+
+.btn-pay{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 150px;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-pay:hover{
+    background-color: rgb(63, 63, 63);
+    color: white;
+    transition: ease-in .3s;
+}
+
+.lines{
+    border-right: 5px solid #d6ced8a6;
+    border-left: 5px solid #d6ced8a6;
+    margin-top: 30px;
+}
+
+/*Find Us*/
+
+.map{
+    margin-left: 0px;
+}
+
+.find-us{
+    width: 40%;
+    margin-left: 10px;
+    margin-top: 80px;
+}
+
+.form{
+    margin-top: 200px;
+    margin-left: 0px;
+    position: right;
+}
+
+.btn-find{
+    border: 2px solid #332ee0;
+    border-radius: 24px;
+    transition: .3s;
+    background: none;
+    margin-left: 500px;
+    margin-top: 10px;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+}
+
+/*large tablet*/
+
+@media (min-width:64em){
+    
+/*Header*/
+
+header{
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    position: fixed; 
+}
+
+header .logo{
+        font-size: 2em;
+}
+
+header li a{
+    color: black;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 60px;
+}
+
+header li a:hover{
+    margin-right: 10px;
+}
+
+header ul a:hover{
+    margin-right: 10px;
+}
+
+/*Basket page*/
+
+.basket-body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("images/car5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content-1{
+    text-align: center;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list li{
+    margin-top: 0px;
+    padding: 15px;
+    list-style: none;
+}
+
+.content-2{
+    padding-top: 100px;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list-2{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-top: 20px;
+    margin-left: 200px;
+    font-size: 10px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list-2 li{
+    margin-top: 30px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 10px;
+    list-style: none;
+}
+
+.btn-pay{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 400px;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-pay:hover{
+    background-color: rgb(63, 63, 63);
+    color: white;
+    transition: ease-in .3s;
+}
+
+.lines{
+    border-right: 5px solid #d6ced8a6;
+    border-left: 5px solid #d6ced8a6;
+    margin-top: 30px;
+}
+
+.data-basket{
+    text-align: center;
+    color: white;
+    margin-top: 180px;
+}
+
+/*Sign Up Page*/
+
+.data-sign{
+    text-align: center;
+    color: white;
+     margin-top: 300px;
+}
+
+header{
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    position: fixed; 
+}
+
+header .logo{
+    font-size: 2em;
+}
+
+header li a{
+    color: black;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 60px;
+}
+
+header li a:hover{
+    margin-right: 10px;
+}
+
+header ul a:hover{
+    margin-right: 10px;
+}
+
+.css-input {
+    margin: 20px;
+    padding: 4px;
+    font-size: 30px;
+    border-width: 7px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 50px;
+    box-shadow: 0px 0px 14px rgba(66,66,66,.85);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+.data-sign{
+    text-align: center;
+    color: white; 
+}
+
+.myButton {
+    margin-top: 20px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #706c70 100%);
+    background-color:#ededed;
+    border-radius:25px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family: 'Orbitron', sans-serif;
+    font-size:22px;
+    font-weight:bold;
+    padding:10px 33px;
+    text-decoration:none;
+    text-shadow:0px 0px 5px #ffffff;
+}
+
+.myButton:hover {
+    background:linear-gradient(to bottom, #706c70 5%, #ededed 100%);
+    background-color:#706c70;
+}
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+/*Laptop and Desktop*/
+
+@media (min-width:80em){
+
+/*Header*/    
+
+header .logo{
+    font-size: 2.5em;
+}
+
+header li a{
+    color:black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 80px;
+    font-size: 1.6em;
+}
+
+header li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+header ul a:hover{
+    margin-right: 10px;
+}
+
+/*Home Page*/
+
+.about-left{
+    flex-basis: 40%;
+}
+
+ul.know-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.know-content li{
+    padding: 0 30px;
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.about-btn{
+    margin-top: 600px;
+}
+
+/*Basket Page*/
+
+.basket-body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url("images/car5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content-1{
+    text-align: center;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list li{
+    margin-top: 0px;
+    padding: 15px;
+    list-style: none;
+}
+
+.content-2{
+    padding-top: 100px;
+    display: table; 
+    margin: 0 auto;
+}
+
+.content-list-2{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-top: 20px;
+    margin-left: 200px;
+    font-size: 10px;
+    color: var(--third);
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content-list-2 li{
+    margin-top: 30px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 10px;
+    list-style: none;
+}
+
+.btn-pay{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 90px;
+    margin-left: 550px;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-pay:hover{
+    background-color: rgb(63, 63, 63);
+    color: white;
+    transition: ease-in .3s;
+}
+
+.lines{
+    border-right: 5px solid #d6ced8a6;
+    border-left: 5px solid #d6ced8a6;
+    margin-top: 30px;
+}
+
+.data-basket{
+    text-align: center;
+    color: white;
+    margin-top: 180px;
+}
+
+/*Sign Up Page*/
+
+.css-input {
+    margin: 20px;
+    padding: 4px;
+    font-size: 30px;
+    border-width: 7px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 50px;
+    box-shadow: 0px 0px 14px rgba(66,66,66,.85);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+.data-sign{
+    text-align: center;
+    color: white;
+     margin-top: 180px;
+     float: right;
+     margin-right: 200px;
+}
+
+.myButton {
+    margin-top: 20px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #706c70 100%);
+    background-color:#ededed;
+    border-radius:25px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family: 'Orbitron', sans-serif;
+    font-size:22px;
+    font-weight:bold;
+    padding:10px 33px;
+    text-decoration:none;
+    text-shadow:0px 0px 5px #ffffff;
+}
+
+.myButton:hover {
+    background:linear-gradient(to bottom, #706c70 5%, #ededed 100%);
+    background-color:#706c70;
+} 
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+/*Find Us Page*/
+
+.map{
+    margin-left: 0px;
+}
+
+.find-us{
+    width: 30%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.form{
+    margin-top: 200px;
+    margin-left: 0px;
+    position: right;
+}
+
+.btn-find{
+    border: 2px solid #332ee0;
+    border-radius: 24px;
+    transition: .3s;
+    background: none;
+    margin-left: 800px;
+    margin-top: 10px;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+
+}
