@@ -16,7 +16,7 @@ body{
     background-attachment: fixed;
 }
 
-.header{
+header{
     background: rgb(73,73,73);
     background: linear-gradient(90deg, rgba(73,73,73,0.8242647400757178) 25%, rgba(112,112,112,0.9082983535210959) 45%, rgba(219,219,219,0.4713235636051295) 75%);
     width: 100%;
@@ -28,14 +28,14 @@ body{
     opacity: 0.7;
 }
 
-.header ul{
+header ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-.header ul a{
+header ul a{
     text-decoration: none;
     display: block;
     padding: 20px;
@@ -44,11 +44,11 @@ body{
 
 }
 
-.header li a:hover{
+header li a:hover{
     color:  rgb(255, 255, 255);
     transition: 0.5s;
 }
-.header .logo{
+header .logo{
     text-decoration: none;
     float: left;
     display: block;
@@ -59,26 +59,26 @@ body{
     margin-top: 5px;
     color: white;
 }
-.header .logo:hover{
+header .logo:hover{
     color: rgb(255, 0, 0);
     transition: ease-out 0.8s;
 }
 
 
-.header .navigation {
+header .navigation {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
 }
 
-.header .menu-icon{
+header .menu-icon{
     padding: 28px 20px;
     position: relative;
     float: right ;
     cursor: pointer;
 }
 
-.header .menu-icon .nav-icon{
+header .menu-icon .nav-icon{
     background:#000000;
     display: block;
     height: 2px;
@@ -87,7 +87,7 @@ body{
     transition: background .2s ease-out;
 }
 
-.header .menu-icon .nav-icon:before{
+header .menu-icon .nav-icon:before{
     background: #000000;
     content:"" ;
     display: block;
@@ -98,7 +98,7 @@ body{
     top: 5px;
 }
 
-.header .menu-icon .nav-icon::after{
+header .menu-icon .nav-icon::after{
     background: #000000;
     content:"" ;
     display: block;
@@ -109,24 +109,24 @@ body{
     top: -5px;
 }
 
-.header .menu-btn{
+header .menu-btn{
     display: none;
 }
 
-.header .menu-btn:checked ~ .navigation {
+header .menu-btn:checked ~ .navigation {
     max-height: 280px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon{
+header .menu-btn:checked ~ .menu-icon .nav-icon{
     background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+header .menu-btn:checked ~ .menu-icon .nav-icon:before{
     transform: rotate(-45deg); 
     top: 0;
 }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+header .menu-btn:checked ~ .menu-icon .nav-icon:after{
     transform: rotate(45deg);
     top: 0;
 }
@@ -243,41 +243,41 @@ section {
 
 @media (min-width:740px) {
    
-    .header{
+    header{
         width: 100%;
         position: fixed; 
         top: 0;
         z-index: 1;
     }
-    .header .logo{
+    header .logo{
         font-size: 1.6em;
     }
-    .header ul a{
+    header ul a{
         font-size: 14px;
         color: rgb(0, 0, 0);
     }
-    .header li{
+    header li{
         float: left;
     }
-    .header li a{
+    header li a{
         color: black;
         padding:10px 24px;
         padding-top: 15px;
         
     }
-    .header li a:hover{
+    header li a:hover{
         color: rgb(255, 0, 0);
     }
-    .header ul a:hover{
+    header ul a:hover{
         margin-right: 10px;
     }
 
-    .header .navigation{
+    header .navigation{
         clear: none;
         float: right;
         max-height: none;
     }
-    .header .menu-icon{
+    header .menu-icon{
         display: none;
     }
 
@@ -331,20 +331,20 @@ section {
     /*Laptop and Desktop*/
 
 @media (min-width:1280px){
-    .header .logo{
+    header .logo{
         font-size: 2.5em;
     }
-    .header li a{
+    header li a{
         color: black;
         padding-top: 20px;
         padding-bottom: 20px;
         padding-right: 80px;
         font-size: 1.6em;
     }
-    .header li a:hover{
+    header li a:hover{
         color: white;
     }
-    .header ul a:hover{
+    header ul a:hover{
         margin-right: 10px;
     }
 
