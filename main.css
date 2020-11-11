@@ -22,7 +22,7 @@ html{
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     
 }
 
@@ -30,13 +30,13 @@ body{
     background-image: url(images/11.jpg);
     background-repeat: no-repeat;
     background-size: 1539px 1000px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .basket-body{
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     background-image: url("images/car3.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -47,7 +47,7 @@ body{
 .sign-body{
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     background-image: url("images/1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -58,7 +58,7 @@ body{
 .find-body{
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     background-image: url("images/bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -70,14 +70,13 @@ body{
 
 header{
     background: rgb(73,73,73);
-    background: linear-gradient(90deg, rgba(73,73,73,0.8242647400757178) 25%, rgba(112,112,112,0.9082983535210959) 45%, rgba(219,219,219,0.4713235636051295) 75%);
+    background: linear-gradient(90deg, rgb(19, 19, 19) 25%, rgba(46, 46, 46, 0.908) 45%, rgba(116, 116, 116, 0.471) 75%);
     width: 100%;
     position: fixed;
     overflow: hidden; 
     top: 0;
     z-index: 1;
     font-size: 11px;
-    opacity: 0.7;
 }
 
 header ul{
@@ -183,7 +182,7 @@ header .menu-btn:checked ~ .menu-icon .nav-icon:after{
 
 /*Home Page*/
 
-#section-home{
+section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,7 +288,7 @@ ul.know-content{
     background-position: center;
 }
 
-.about-btn{
+.button-home{
     display: inline-block;
     margin-top: 500px;
     padding: 20px 25px;
@@ -301,7 +300,7 @@ ul.know-content{
     cursor: pointer;
 }
 
-.about-btn:hover{
+.button-home:hover{
     background-color: rgb(63, 63, 63);
     color: red;
     transition: ease-in .3s;
@@ -409,7 +408,7 @@ h4 {
 
 .btn-pay:hover{
     background-color: rgb(63, 63, 63);
-    color: white;
+    color: red;
     transition: ease-in .3s;
 }
 
@@ -447,7 +446,8 @@ h4 {
 	padding:7px 32px;
 	text-decoration:none;
     text-shadow:0px 1px 0px #ffffff;
-    margin-top: 15px;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }
 
 .myButton:hover {
@@ -467,10 +467,11 @@ h4 {
 
 /*Find Us Page*/
 
-section{
+#section-find{
     display: flex;
     flex-direction: column;
-    padding: 100px 50px;  
+    padding: 100px 50px;
+    position: relative; 
 }
 
 .find-us{
@@ -479,28 +480,28 @@ section{
 }
 
 .form{
-    margin-top: 350px;
+    margin-top: 150px;
     position: right;
 }
 
 .btn-find{
-    border: 2px solid #332ee0;
-    border-radius: 24px;
-    transition: .3s;
-    background: none;
+    text-decoration: none;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
     margin-left: 50px;
     margin-top: 10px;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1em;
-    cursor: pointer;
-    display: flex;  
 }
 
 .btn-find:hover{
-    background: #332ee0;    
+    background-color: rgb(63, 63, 63);
+    color: red;
+    transition: ease-in .3s;  
 }
 
 .info{
@@ -518,56 +519,111 @@ section{
     height: 300px;
 }
 
-section {
-    position: absolute;
-}
 
 /*Footer*/
 
-#footer{
+footer{
     position: static;
-    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+    bottom: 0px;
     width: 100%;
-    height: 150px;  
-    background: rgb(73,73,73);
-    background: linear-gradient(90deg, rgba(73,73,73,0.8242647400757178) 25%, rgba(112,112,112,0.9082983535210959) 45%, rgba(219,219,219,0.4713235636051295) 75%);
-    opacity: 0.8;
+    background: black;
+}
+.main-content{
+    color: white;
+    line-height: 30px;
+    display: flex;
 }
 
-a,h2,p{
-    color: black;
+.main-content .left-box, .main-content .center-box, .main-content .right-box{
+    flex-basis: 50%;
+    padding: 20px 20px;
+    margin: 20px 0 0 0;
 }
-
-.text{
-    color: black;
-}
-
-.email{
+.left-box a{
+    display: block;
+    margin: 20px 0 0 0;
     color: white;
 }
-
-.place{
+.left-box a:hover{
+    color: red;
+    transition: 0.5s ease-in;
+}
+.center-box li{
+    display: inline;
+    font-size: 20px;
+}
+.center-box a{
+    padding: 0 5px;
     color: white;
-}
 
-.phone{
-    color: white;
 }
-
-h2{
+.center-box .social, p{
+    margin: 20px 0 0 0;
+}
+.center-box .social a i{
+    height: 40px;
+    width: 40px;
+    background: rgb(26, 26, 26);
+    line-height: 40px;
     text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.center-box .social a i:hover{
+    background: red;
+    transition: 0.5s ease-in;
 }
 
-.social{
+.left-box h2, .right-box h2, .center-box h2{
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: red;
+}
+
+.right-box .content{
+    margin: 20px 0 0 0;
+}
+.right-box .fas{
+    font-size: 1.43rem;
+    background: rgb(26, 26, 26);
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
     text-align: center;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
-.content{
-    text-align: center;
+.right-box .fas:hover{
+    color: red;
 }
 
-.copyright{
-text-align: center;
+.right-box .text{
+    font-size: 1.06rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.right-box .phone{
+    margin: 10px 0;
+}
+
+
+@media screen and (max-width: 900px) {
+    footer{
+        position: static;
+        bottom: 0px;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .left-box, .main-content .center-box, .main-content .right-box{
+        margin: 5px 0;
+    }
 }
 
 /*small tablet*/
@@ -627,7 +683,7 @@ header .menu-icon{
 .basket-body{
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     background-image: url("images/car5.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -703,7 +759,7 @@ header .menu-icon{
 
 .btn-pay:hover{
     background-color: rgb(63, 63, 63);
-    color: white;
+    color: red;
     transition: ease-in .3s;
 }
 
@@ -732,17 +788,16 @@ header .menu-icon{
 }
 
 .btn-find{
-    border: 2px solid #332ee0;
-    border-radius: 24px;
-    transition: .3s;
-    background: none;
+    text-decoration: none;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
     margin-left: 500px;
     margin-top: 10px;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
     display: flex;
 }
 
@@ -785,7 +840,7 @@ header ul a:hover{
 .basket-body{
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     background-image: url("images/car5.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -858,7 +913,7 @@ header ul a:hover{
 
 .btn-pay:hover{
     background-color: rgb(63, 63, 63);
-    color: white;
+    color: red;
     transition: ease-in .3s;
 }
 
@@ -1001,7 +1056,7 @@ ul.know-content{
     text-align: center;
 }
 
-.about-btn{
+.btn-home{
     margin-top: 600px;
 }
 
@@ -1010,7 +1065,7 @@ ul.know-content{
 .basket-body{
     padding: 0;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     background-image: url("images/car5.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -1083,7 +1138,7 @@ ul.know-content{
 
 .btn-pay:hover{
     background-color: rgb(63, 63, 63);
-    color: white;
+    color: red;
     transition: ease-in .3s;
 }
 
@@ -1164,22 +1219,22 @@ ul.know-content{
 }
 
 .form{
-    margin-top: 200px;
+    margin-top: 0px;
     margin-left: 0px;
     position: right;
 }
 
 .btn-find{
-    border: 2px solid #332ee0;
-    border-radius: 24px;
-    transition: .3s;
-    background: none;
+    
     margin-left: 800px;
     margin-top: 10px;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    font-size: 1em;
+    text-decoration: none;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
     cursor: pointer;
     display: flex;
 
