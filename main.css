@@ -226,6 +226,71 @@ h1{
     opacity: .3;
 }
 
+.scroll{
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-text{
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 5px;
+    background-color: #000;
+    text-decoration: none;
+    color: white;
+}
+.scroll-text:hover{
+    background-color: rgb(39, 39, 39);
+    color: red;
+    transition: ease-in .5s;
+}
+
+.arrow span{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 20px;
+    border: 2px solid transparent;
+    border-right-color: white;
+    border-bottom-color: white ;
+    transform: rotate(45deg);
+    animation: arrow-down .5s alternate infinite;
+}
+
+@keyframes move {
+    0%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+}
+
+@keyframes arrow-down {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .25;
+    }
+    50%{
+        opacity: .5;
+    }
+    75%{
+        opacity: .75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .specs-area{
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0.49933476808692223) 25%, rgba(204,204,204,0.9082983535210959) 45%, rgba(148,146,146,0.8158613787311799) 75%);
@@ -275,6 +340,7 @@ ul.know-content{
     min-height: 100vh;
     color: rgb(255, 255, 255);
     text-align: center;
+    z-index: 1;
 }
 
 .third .third-img{
@@ -415,17 +481,18 @@ h4 {
 /*Sign Up Page*/
 
 .css-input {
-    padding: 2px;
-    font-size: 19px;
-    border-width: 4px;
-    border-color: #CCCCCC;
-    background-color: #FFFFFF;
-    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    padding: 8px;
+    font-size: 23px;
+    border-width: 2px;
+    border-color: #ff0000;
+    background-color: #000000;
+    color: #ffffff;
     border-style: solid;
-    border-radius: 17px;
-    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    border-radius: 18px;
+    box-shadow: 0px 1px 21px rgba(66,66,66,.75);
     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
-    margin-top: 15px;
 }
 
 .css-input:focus {
@@ -433,26 +500,25 @@ h4 {
 }
 
 .myButton {
-	box-shadow: 3px 4px 0px 0px #7d7d7d;
-	background:linear-gradient(to bottom, #ededed 5%, #878787 100%);
-	background-color:#ededed;
-	border-radius:15px;
-	border:1px solid #8a8a8a;
+	
 	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
+	background: rgb(80, 80, 80);
+    border-radius: 50px;
     font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
 	font-size:17px;
 	padding:7px 32px;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #ffffff;
     margin-top: 25px;
     margin-bottom: 30px;
 }
 
 .myButton:hover {
-	background:linear-gradient(to bottom, #878787 5%, #ededed 100%);
-	background-color:#878787;
+	background-color: rgb(63, 63, 63);
+    color: red;
+    transition: ease-in .3s;
 }
 
 .myButton:active {
@@ -965,16 +1031,15 @@ header ul a:hover{
 }
 
 .css-input {
-    margin: 20px;
-    padding: 4px;
-    font-size: 30px;
-    border-width: 7px;
-    border-color: #CCCCCC;
-    background-color: #FFFFFF;
-    color: #000000;
+    padding: 8px;
+    font-size: 23px;
+    border-width: 2px;
+    border-color: #ff0000;
+    background-color: #000000;
+    color: #ffffff;
     border-style: solid;
-    border-radius: 50px;
-    box-shadow: 0px 0px 14px rgba(66,66,66,.85);
+    border-radius: 18px;
+    box-shadow: 0px 1px 21px rgba(66,66,66,.75);
     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
 }
 
@@ -984,26 +1049,25 @@ header ul a:hover{
 }
 
 .myButton {
-    margin-top: 20px;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:linear-gradient(to bottom, #ededed 5%, #706c70 100%);
-    background-color:#ededed;
-    border-radius:25px;
-    border:1px solid #dcdcdc;
-    display:inline-block;
-    cursor:pointer;
-    color:#000000;
+    padding-top: 20px;
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
     font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    display:inline-block;
     font-size:22px;
     font-weight:bold;
     padding:10px 33px;
     text-decoration:none;
-    text-shadow:0px 0px 5px #ffffff;
 }
 
 .myButton:hover {
-    background:linear-gradient(to bottom, #706c70 5%, #ededed 100%);
-    background-color:#706c70;
+    background-color: rgb(63, 63, 63);
+    color: red;
+    transition: ease-in .3s;
 }
 
 .myButton:active {
@@ -1157,16 +1221,15 @@ ul.know-content{
 /*Sign Up Page*/
 
 .css-input {
-    margin: 20px;
-    padding: 4px;
-    font-size: 30px;
-    border-width: 7px;
-    border-color: #CCCCCC;
-    background-color: #FFFFFF;
-    color: #000000;
+    padding: 8px;
+    font-size: 23px;
+    border-width: 2px;
+    border-color: #ff0000;
+    background-color: #000000;
+    color: #ffffff;
     border-style: solid;
-    border-radius: 50px;
-    box-shadow: 0px 0px 14px rgba(66,66,66,.85);
+    border-radius: 18px;
+    box-shadow: 0px 1px 21px rgba(66,66,66,.75);
     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
 }
 
@@ -1179,26 +1242,26 @@ ul.know-content{
 }
 
 .myButton {
+    padding: 20px 25px;
+    background: rgb(80, 80, 80);
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
     margin-top: 20px;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:linear-gradient(to bottom, #ededed 5%, #706c70 100%);
-    background-color:#ededed;
-    border-radius:25px;
-    border:1px solid #dcdcdc;
     display:inline-block;
-    cursor:pointer;
-    color:#000000;
     font-family: 'Orbitron', sans-serif;
     font-size:22px;
     font-weight:bold;
     padding:10px 33px;
     text-decoration:none;
-    text-shadow:0px 0px 5px #ffffff;
 }
 
 .myButton:hover {
-    background:linear-gradient(to bottom, #706c70 5%, #ededed 100%);
-    background-color:#706c70;
+    background-color: rgb(63, 63, 63);
+    color: red;
+    transition: ease-in .3s;
 } 
 
 .myButton:active {
